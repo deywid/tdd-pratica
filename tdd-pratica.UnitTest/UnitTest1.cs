@@ -6,9 +6,22 @@ namespace tdd_pratica.UnitTest
     public class GirarListaTest
     {
         [TestMethod]
-        public void DeveriaMoverPrimeiroItemParaOFinal()
+        public void DeveriaMoverPrimeiroItemParaOFinal4Itens()
         {
             var lista = new int[] { 1, 2, 3, 4 };
+            var gira = new GiraLista();
+
+            var nova = gira.Girar(lista);
+
+            Assert.AreEqual(lista.Length, nova.Length);
+            Assert.AreEqual(lista[1], nova[0]);
+            Assert.AreEqual(lista[0], nova[3]);
+        }
+
+        [TestMethod]
+        public void DeveriaMoverPrimeiroItemParaOFinal3Itens()
+        {
+            var lista = new int[] { 11, 12, 13 };
             var gira = new GiraLista();
 
             var nova = gira.Girar(lista);
