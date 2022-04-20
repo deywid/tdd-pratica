@@ -8,14 +8,13 @@ namespace tdd_pratica
 {
     public class GiraLista
     {
-        public int[] Girar(int[] lista)
+        public List<int> Girar(List<int> lista)
         {
-            var item0 = lista[0];
-            var item1 = lista[1];
-            var item2 = lista[2];
-            var item3 = lista[3];
-
-            return new int[] {item1, item2, item3, item0 };
+            var nova = new List<int>();
+            nova.AddRange(lista);
+            nova.Add(lista[0]);
+            nova.RemoveAt(0);
+            return nova;
         }
     }
 }

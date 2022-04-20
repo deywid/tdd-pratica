@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace tdd_pratica.UnitTest
@@ -8,12 +9,12 @@ namespace tdd_pratica.UnitTest
         [TestMethod]
         public void DeveriaMoverPrimeiroItemParaOFinal4Itens()
         {
-            var lista = new int[] { 1, 2, 3, 4 };
+            var lista = new List<int> { 1, 2, 3, 4 };
             var gira = new GiraLista();
 
             var nova = gira.Girar(lista);
 
-            Assert.AreEqual(lista.Length, nova.Length);
+            Assert.AreEqual(lista.Count, nova.Count);
             Assert.AreEqual(lista[1], nova[0]);
             Assert.AreEqual(lista[0], nova[3]);
         }
@@ -21,14 +22,14 @@ namespace tdd_pratica.UnitTest
         [TestMethod]
         public void DeveriaMoverPrimeiroItemParaOFinal3Itens()
         {
-            var lista = new int[] { 11, 12, 13 };
+            var lista = new List<int> { 11, 12, 13 };
             var gira = new GiraLista();
 
             var nova = gira.Girar(lista);
 
-            Assert.AreEqual(lista.Length, nova.Length);
+            Assert.AreEqual(lista.Count, nova.Count);
             Assert.AreEqual(lista[1], nova[0]);
-            Assert.AreEqual(lista[0], nova[3]);
+            Assert.AreEqual(lista[0], nova[2]);
         }
     }
 }
