@@ -14,7 +14,7 @@ namespace tdd_pratica.UnitTest
             var nova = gira.Girar(lista);
 
             Assert.AreEqual(lista.Length, nova.Length);
-            Assert.AreEqual(1, nova[3]);
+            Assert.AreEqual(lista[1], nova[0]);
         }
     }
 }
