@@ -10,7 +10,9 @@ namespace tdd_pratica
     {
         public int[] Girar(int[] lista)
         {
-            return new int[] {2, 0, 0, 0};
+            var item1 = lista[1];
+
+            return new int[] {item1, 0, 0, 0};
         }
     }
 }
