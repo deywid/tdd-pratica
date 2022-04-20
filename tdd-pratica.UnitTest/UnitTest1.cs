@@ -31,5 +31,18 @@ namespace tdd_pratica.UnitTest
             Assert.AreEqual(lista[1], nova[0]);
             Assert.AreEqual(lista[0], nova[2]);
         }
+
+        [TestMethod]
+        public void DeveriaMoverPrimeiroItemParaOFinalNItens()
+        {
+            var lista = new List<int> { 21, 22, 23, 24, 25, 26 };
+            var gira = new GiraLista();
+
+            var nova = gira.Girar(lista);
+
+            Assert.AreEqual(lista.Count, nova.Count);
+            Assert.AreEqual(lista[1], nova[0]);
+            Assert.AreEqual(lista[0], nova[2]);
+        }
     }
 }
