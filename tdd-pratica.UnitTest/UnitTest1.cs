@@ -42,7 +42,7 @@ namespace tdd_pratica.UnitTest
 
             Assert.AreEqual(lista.Count, nova.Count);
             Assert.AreEqual(lista[1], nova[0]);
-            Assert.AreEqual(lista[0], nova[2]);
+            Assert.AreEqual(lista[0], nova[^1]);
         }
     }
 }
